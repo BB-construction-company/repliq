@@ -8,6 +8,16 @@ Built for the **Claude Hackathon 2026** by **Team Daemons** - Prarthan Patel and
 
 ---
 
+## The Story Behind Repliq
+
+We made a short video walking through how the idea of Repliq came to life - what problem we kept running into, why existing tools weren't solving it, and how we arrived at the bidirectional communication bridge concept.
+
+[Watch the ideation video on YouTube](https://youtu.be/2MS6-73UQHw)
+
+Made with the help of NotebookLM.
+
+---
+
 ## What It Does
 
 **For the receiver** - when you open an email, Repliq shows you the tone behind the words, 2-3 possible interpretations ranked by likelihood, and an optional suggested reply if the message is ambiguous.
@@ -165,6 +175,14 @@ Requires `Authorization: Bearer <firebase_id_token>`. Returns the user's prefere
 - **Interactive tone validation** - a mode where the user guesses the tone of a received message before seeing the analysis, building communication awareness over time.
 - **Grammar and spell check** - integrate lightweight grammar and spelling correction alongside tone analysis so Repliq covers clarity at every level.
 - **Deeper NLP and sarcasm detection** - improve context parsing and sentiment analysis to understand sarcasm, irony, and hidden meaning that surface-level tone classification misses.
+
+---
+
+## Live Demo
+
+See Repliq in action. This demo walks through how Repliq analyzes an incoming email and suggests a calmer, clearer reply — so your words land the way you actually intended.
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=Ad0T6H7zwZ8)
 
 ---
 

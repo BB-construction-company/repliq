@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repliq</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <!-- Idle state — shown when no analysis is active -->
+    <div id="state-loading">Waiting for a message...</div>
+
+    <!-- Top section: received message analysis (Slice 3) -->
+    <div id="section-decode" class="hidden">
+      <div id="panel-header">
+        <span id="tone-dot"></span>
+        <span id="tone-summary"></span>
+        <button id="btn-dismiss">✕</button>
+      </div>
+
+      <p id="explanation"></p>
+
+      <div id="meanings-section">
+        <div class="section-label">Possible meanings</div>
+        <div id="meanings-list"></div>
+      </div>
+
+      <div id="reply-section" class="hidden">
+        <div class="section-label">Suggested reply</div>
+        <div id="suggested-reply"></div>
+        <button id="btn-apply-reply">Use this reply</button>
+      </div>
+    </div>
+
+    <!-- Divider — visible only when both sections are active simultaneously -->
+    <div id="section-divider" class="hidden"></div>
+
+    <!-- Bottom section: compose hint for reply window (Slice 4) -->
+    <div id="section-compose" class="hidden">
+      <div id="compose-header">
+        <div id="compose-header-left">
+          <span id="compose-dot"></span>
+          <span id="compose-flag-reason"></span>
+        </div>
+        <button id="btn-compose-dismiss">✕</button>
+      </div>
+      <p id="compose-explanation"></p>
+      <div class="section-label">Clearer version</div>
+      <div id="compose-rewrite"></div>
+      <button id="btn-apply-rewrite">Replace my draft</button>
+    </div>
+
+    <!-- Compose analysis in progress -->
+    <div id="section-compose-loading" class="hidden">
+      <div class="compose-checking">Checking your reply...</div>
+    </div>
+
+    <!-- Error state -->
+    <div id="state-error" class="hidden">
+      Unable to analyze this message.
+    </div>
+
+    <script src="panel.js"></script>
+  </body>
+</html>

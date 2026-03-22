@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Repliq",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "storage", "scripting", "sidePanel"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:3000/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:5173/*",
+      "https://yourdomain.com/*"
+    ]
+  },
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "panel/panel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["shared/BridgeState.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
